@@ -55,7 +55,11 @@
 
 .todo_list {
   padding: 0 20px;
-  margin: 40px 20px;
+  margin: 20px 20px;
+}
+
+.todo_title {
+  padding-top: 20px;
 }
 
 .todo_container {
