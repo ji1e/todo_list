@@ -3,6 +3,7 @@ import "../App.css";
 import Button from "components/Button";
 import Card from "components/Card";
 import { styled } from "styled-components";
+import Header from "components/Header";
 
 function Home() {
   // 초기값 state 변수 선언
@@ -86,19 +87,19 @@ function Home() {
   return (
     <div className="main">
       {/* 메인 헤더 부분 */}
-      <header className="main_header">My Todo List</header>
+      <Header />
 
-      {/* 투두리스트 카드 등록(입력) 부분 */}
+      {/* 해야 할 일 등록(입력) 부분 */}
       <form onSubmit={clickAddButtonHandler} className="todo_form">
         <div className="todo_input">
-          <span>제목</span>
+          <label>제목</label>
           <input
             name="title"
             type="text"
             value={inputTitle}
             onChange={titleChangeHandler}
           />
-          <span>내용</span>
+          <label>내용</label>
           <input
             name="content"
             type="text"
@@ -109,7 +110,7 @@ function Home() {
         <Button clickAddButtonHandler={clickAddButtonHandler} />
       </form>
 
-      {/* 투두리스트 나열 부분 */}
+      {/* 투두리스트 부분 */}
       <div className="todo_list">
         {/* 진행 중인 투두리스트들 */}
         <h2 className="todo_title">Working..🔥</h2>

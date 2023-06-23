@@ -6,7 +6,7 @@ const Card = ({ item, removeFunction, completeFunction }) => {
     <div className="todo_card">
       {/* 카드 안 제목과 내용 */}
       <div key={item.id} className="contents">
-        <Link to={`/detail/${item.id}`} item={item}>
+        <Link to={`/${item.id}`} item={item}>
           상세보기
         </Link>
         <h4>{item.title}</h4>
