@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
+
 // 투두리스트 카드
 const Card = ({ item, removeFunction, completeFunction }) => {
   return (
     <div className="todo_card">
       {/* 카드 안 제목과 내용 */}
       <div key={item.id} className="contents">
+        <Link to={`/detail/${item.id}`} item={item}>
+          상세보기
+        </Link>
         <h4>{item.title}</h4>
         <p>{item.content}</p>
         <div className="buttons">
